@@ -12,7 +12,8 @@ from datas import save_users,show_users
 from aiogram.client.session.aiohttp import AiohttpSession
 
 api = '8250792358:AAHO5YvumhY2lL3fu4rM5hgqW25bnnOb6Yc'
-bot = Bot(api)
+session = AiohttpSession(proxy='http://proxy.server:3128')
+bot = Bot(api,session=session)
 dp = Dispatcher()
 admins= 7976107229
 
